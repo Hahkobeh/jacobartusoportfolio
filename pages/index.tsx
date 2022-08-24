@@ -5,7 +5,7 @@ import Navbar from '../components/navbar';
 
 const Home: NextPage = () => {
 	return (
-		<div>
+		<>
 			<Head>
 				<title>Jacob Artuso</title>
 				<meta
@@ -34,7 +34,7 @@ const Home: NextPage = () => {
 			</main>
 
 			<footer></footer>
-		</div>
+		</>
 	);
 };
 
