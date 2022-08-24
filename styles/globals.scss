@@ -8,3 +8,7 @@ body {
 	color: $font-colour;
 	font-family: 'Source Sans Pro', sans-serif;
 }
+
+body {
+	padding-top: $nav_height;
+}

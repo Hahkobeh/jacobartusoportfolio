@@ -20,18 +20,17 @@ const Home: NextPage = () => {
 				<h1>d</h1>
 				<h1>d</h1>
 				<h1>d</h1>
-				<h1>d</h1>
-				<h1>d</h1>
-				<h1>d</h1>
-				<h1>d</h1>
-				<h1>d</h1>
-				<h1>d</h1>
-				<h1>d</h1>
-				<h1>d</h1>
-				<h1>d</h1>
-				<h1>d</h1>
-				<h1>d</h1>
-				<h1>d</h1>
+				<a
+					target='_blank'
+					href='https://icons8.com/icon/84026/menu'
+					rel='noreferrer'
+				>
+					Menu
+				</a>{' '}
+				icon by{' '}
+				<a target='_blank' href='https://icons8.com' rel='noreferrer'>
+					Icons8
+				</a>
 			</main>
 
 			<footer></footer>
