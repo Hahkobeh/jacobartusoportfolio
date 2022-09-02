@@ -1,30 +1,36 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useState } from 'react';
 import Close from '../../public/icons8-close.svg';
 import Menu from '../../public/icons8-menu.svg';
 import styles from './navbar.module.scss';
-type Props = {};
 
-const Navbar = (props: Props) => {
+type Props = {
+	current: string;
+};
+
+
+
+
+const Navbar = ({ current }: Props) => {
 	const [showMenu, setShowMenu] = useState(false);
+	const [theme, setTheme] = useState('light');
 
-	const menuAffect = (className: string) => {
-		return showMenu ? ' ' + styles['modify_' + className] : '';
+	const changeTheme = () => {
+		setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
 	};
 
 	return (
 		<nav className={styles.container}>
-			<div className={styles.menu + menuAffect('menu')}>hello</div>
-			<h1 className={styles.logo + menuAffect('logo')}>JA</h1>
-			<div
-				className={
-					styles.navigation_options + menuAffect('navigation_options')
-				}
-			>
+			
+			<h1 className={styles.logo}>JA</h1>
+			<div className={styles.options}>
+				
 				<div
-					className={styles.menu_icon + menuAffect('menu_icon')}
+					className={styles.menu_icon}
 					onClick={() => setShowMenu(!showMenu)}
 				>
+					
 					<Image
 						src={showMenu ? Close : Menu}
 						alt='menu icon'
@@ -32,6 +38,15 @@ const Navbar = (props: Props) => {
 					/>
 				</div>
 			</div>
+			<ul className=''>
+				<li>
+					<Link href={'/about'}>About</Link>
+				</li>
+				<li>Experience</li>
+				<li>Skills</li>
+				<li>Projects</li>
+			</ul>
+			<input type='button' onClick={changeTheme} />
 		</nav>
 	);
 };

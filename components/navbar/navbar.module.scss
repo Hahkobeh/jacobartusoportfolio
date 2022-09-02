@@ -2,7 +2,6 @@
 
 $icon_size: 80px;
 
-$indent: 5px;
 
 .container {
 	position: absolute;
@@ -14,90 +13,11 @@ $indent: 5px;
 	width: 100vw;
 }
 
-.logo {
-	margin: 0;
-
-	padding: 0 1rem;
-	font-size: 8rem;
-	font-weight: 400;
-	color: $font_colour1;
-	line-height: $nav_height;
-	text-align: center;
-	text-shadow: -$indent 0px $accent1;
-	z-index: 1;
-}
-
-.navigation_options {
-	position: absolute;
-	top: 0;
-	right: 0;
-
-	border-top: $nav_height solid $background2;
-	border-left: $nav_height solid transparent;
-	border-right: 0;
-	height: 0;
-	width: $nav_height;
-	&::before {
-		display: block;
-		content: '';
-		position: absolute;
-		top: -$nav_height;
-		right: calc($indent * 1.5);
-
-		border-top: $nav_height solid $accent1;
-		border-left: $nav_height solid transparent;
-		border-right: 0;
-		height: 0;
-		width: $nav_height;
-		z-index: -1;
-	}
-
-	// &::after {
-	// 	position: absolute;
-	// 	right: $nav_height;
-	// 	top: 0;
-	// 	content: '';
-	// 	width: 0;
-	// 	height: 0;
-	// 	border-style: solid;
-	// 	border-width: 0 $nav_height $nav_height 0;
-	// 	border-color: transparent $background2 transparent;
-	// }
-}
-
 .menu_icon {
 	position: fixed;
 	top: 0;
 	right: 0;
 	width: $icon_size;
 	height: $icon_size;
-	margin: calc(($nav_height - $icon_size) / 2);
 	cursor: pointer;
-}
-
-.menu {
-	display: none;
-}
-
-.hide {
-	display: none;
-}
-
-.modify_logo {
-	text-shadow: $indent 0px $accent2;
-	color: $font_colour2;
-}
-
-.modify_menu {
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	background-color: $background2;
-}
-
-.modify_navigation_options {
-	border-top: $nav_height solid $background1;
 }
