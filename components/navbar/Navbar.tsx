@@ -1,3 +1,4 @@
+import classNames from 'classnames/bind';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
@@ -5,14 +6,13 @@ import Close from '../../public/icons8-close.svg';
 import Menu from '../../public/icons8-menu.svg';
 import styles from './navbar.module.scss';
 
+let cn = classNames.bind(styles);
+
 type Props = {
-	current: string;
+	currentPage: string;
 };
 
-
-
-
-const Navbar = ({ current }: Props) => {
+const Navbar = ({ currentPage }: Props) => {
 	const [showMenu, setShowMenu] = useState(false);
 	const [theme, setTheme] = useState('light');
 
@@ -20,33 +20,52 @@ const Navbar = ({ current }: Props) => {
 		setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
 	};
 
+	const selected = (page: string) => {
+		return page === currentPage ? ' ' + styles.active : '';
+	};
+
 	return (
-		<nav className={styles.container}>
-			
-			<h1 className={styles.logo}>JA</h1>
-			<div className={styles.options}>
-				
-				<div
-					className={styles.menu_icon}
-					onClick={() => setShowMenu(!showMenu)}
-				>
-					
-					<Image
-						src={showMenu ? Close : Menu}
-						alt='menu icon'
-						layout='fill'
-					/>
-				</div>
+		<nav className={cn('container')}>
+			<h1 className={cn('logo')}>Jacob Artuso</h1>
+			<div
+				className={cn('menu_icon')}
+				onClick={() => setShowMenu(!showMenu)}
+			>
+				<Image
+					src={showMenu ? Close : Menu}
+					alt='menu icon'
+					layout='fill'
+				/>
 			</div>
-			<ul className=''>
-				<li>
-					<Link href={'/about'}>About</Link>
+			<ul className={cn('options', { options_menu: showMenu })}>
+				<li className={cn('option', { active: selected('About') })}>
+					<Link href={'/about'}>
+						<h2>About</h2>
+					</Link>
 				</li>
-				<li>Experience</li>
-				<li>Skills</li>
-				<li>Projects</li>
+				<li
+					className={cn('option', { active: selected('Experience') })}
+				>
+					<Link href={'/experience'}>
+						<h2>Experience</h2>
+					</Link>
+				</li>
+				<li className={cn('option', { active: selected('Skills') })}>
+					<Link href={'/skills'}>
+						<h2>Skills</h2>
+					</Link>
+				</li>
+				<li className={cn('option', { active: selected('Projects') })}>
+					<Link href={'/projects'}>
+						<h2>Projects</h2>
+					</Link>
+				</li>
+				<li className={cn('option', { active: selected('Contact') })}>
+					<Link href={'/contact'}>
+						<h2>Contact</h2>
+					</Link>
+				</li>
 			</ul>
-			<input type='button' onClick={changeTheme} />
 		</nav>
 	);
 };

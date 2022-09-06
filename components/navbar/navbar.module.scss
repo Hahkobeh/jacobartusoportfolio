@@ -1,7 +1,6 @@
 @import '../../styles/variables.scss';
 
-$icon_size: 80px;
-
+$icon_size: 60px;
 
 .container {
 	position: absolute;
@@ -9,15 +8,79 @@ $icon_size: 80px;
 	left: 0;
 	display: flex;
 
-	height: $nav_height;
+	justify-content: space-between;
 	width: 100vw;
+	height: 5em;
+}
+
+.logo {
+	font-size: 3rem;
+	font-weight: 600;
+	margin: auto;
 }
 
 .menu_icon {
 	position: fixed;
 	top: 0;
 	right: 0;
-	width: $icon_size;
-	height: $icon_size;
+	width: 4em;
+	height: 4em;
+	margin: 0.5em;
+
 	cursor: pointer;
+
+	z-index: 1;
+}
+
+.options {
+	display: none;
+	list-style: none;
+}
+
+.options_menu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	background-color: black;
+	color: white;
+	width: 100vw;
+	height: 100vh;
+	justify-content: center;
+
+	.option {
+		text-align: center;
+		font-weight: 700;
+		font-size: 2rem;
+
+		&:hover {
+			text-decoration: underline;
+		}
+		&.active {
+			color: red;
+			text-decoration: none;
+		}
+	}
+}
+
+@media only screen and (min-width: 1000px) {
+	.logo {
+		margin: auto 2em;
+	}
+	.options {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.menu_icon {
+		display: none;
+	}
+
+	.options_menu {
+		display: none;
+	}
 }

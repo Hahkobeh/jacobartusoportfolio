@@ -5,13 +5,13 @@ import Navbar from '../../components/navbar';
 
 type Props = {};
 
-const About: NextPage = (props: Props) => {
+const Experience: NextPage = (props: Props) => {
 	return (
 		<>
-			<Metadata currentPage='About' />
-			<Navbar currentPage='About' />
+			<Metadata currentPage='Experience' />
+			<Navbar currentPage='Experience' />
 		</>
 	);
 };
 
-export default About;
+export default Experience;
