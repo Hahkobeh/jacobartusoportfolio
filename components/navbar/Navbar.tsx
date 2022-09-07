@@ -26,9 +26,17 @@ const Navbar = ({ currentPage }: Props) => {
 
 	return (
 		<nav className={cn('container')}>
-			<h1 className={cn('logo')}>Jacob Artuso</h1>
+			<Link href={'/'}>
+				<h1
+					className={cn('logo', {
+						logo_menu: showMenu && currentPage !== 'Home',
+					})}
+				>
+					Jacob Artuso
+				</h1>
+			</Link>
 			<div
-				className={cn('menu_icon')}
+				className={cn('icon_menu')}
 				onClick={() => setShowMenu(!showMenu)}
 			>
 				<Image
@@ -38,9 +46,11 @@ const Navbar = ({ currentPage }: Props) => {
 				/>
 			</div>
 			<ul className={cn('options', { options_menu: showMenu })}>
-				<li className={cn('option', { active: selected('About') })}>
+				<li className={cn('option')}>
 					<Link href={'/about'}>
-						<h2>About</h2>
+						<h2 className={cn({ active: selected('About') })}>
+							About
+						</h2>
 					</Link>
 				</li>
 				<li

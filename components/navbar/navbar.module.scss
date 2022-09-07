@@ -1,6 +1,7 @@
 @import '../../styles/variables.scss';
 
-$icon_size: 60px;
+$icon_size: 70px;
+$height: 5em;
 
 .container {
 	position: absolute;
@@ -10,22 +11,30 @@ $icon_size: 60px;
 
 	justify-content: space-between;
 	width: 100vw;
-	height: 5em;
+	height: $height;
 }
 
 .logo {
-	font-size: 3rem;
-	font-weight: 600;
+	font-size: 2.5rem;
+	font-weight: 700;
 	margin: auto;
+	cursor: pointer;
+
+	// text-shadow: 3px 3px 0 red;
 }
 
-.menu_icon {
+.logo_menu {
+	z-index: 1;
+	color: $font_2;
+}
+
+.icon_menu {
 	position: fixed;
 	top: 0;
 	right: 0;
-	width: 4em;
-	height: 4em;
-	margin: 0.5em;
+	width: $icon_size;
+	height: $icon_size;
+	margin: calc(($height - $icon_size) / 2);
 
 	cursor: pointer;
 
@@ -35,6 +44,7 @@ $icon_size: 60px;
 .options {
 	display: none;
 	list-style: none;
+	margin: auto;
 }
 
 .options_menu {
@@ -42,45 +52,83 @@ $icon_size: 60px;
 	top: 0;
 	left: 0;
 	margin: 0;
-	padding: 0;
+	padding: $height 0 0;
 	list-style: none;
 	display: flex;
 	flex-direction: column;
-	background-color: black;
-	color: white;
+	align-items: center;
+	justify-content: space-around;
+	background-color: $background_2;
+	color: $font_2;
 	width: 100vw;
-	height: 100vh;
-	justify-content: center;
+	height: calc(100vh - $height);
 
 	.option {
-		text-align: center;
-		font-weight: 700;
+		font-weight: 600;
 		font-size: 2rem;
+		display: flex;
+		justify-content: center;
 
-		&:hover {
-			text-decoration: underline;
-		}
-		&.active {
-			color: red;
-			text-decoration: none;
+		cursor: pointer;
+
+		h2 {
+			margin: 0;
+			&:hover {
+				border-bottom: 4px solid $font_2;
+				margin-bottom: -4px;
+			}
+			&.active {
+				color: $accent_1;
+				border-bottom: none;
+				margin-bottom: 0;
+			}
 		}
 	}
 }
 
 @media only screen and (min-width: 1000px) {
 	.logo {
+		color: $font_1;
 		margin: auto 2em;
 	}
 	.options {
+		position: absolute;
+		top: 0;
+		right: 2em;
+		left: auto;
+		padding: 0;
+		height: 100%;
 		display: flex;
 		flex-direction: row;
+		justify-content: space-between;
+		gap: 2em;
+		width: max(600px, 50%);
+		color: $font_1;
+		background-color: $background_1;
+
+		.option {
+			height: 100%;
+			display: flex;
+			align-items: center;
+			font-size: 1rem;
+			h2 {
+				cursor: pointer;
+				margin: 0;
+				&:hover {
+					border-bottom: 4px solid $font_1;
+					margin-bottom: -4px;
+				}
+				&.active {
+					color: $font_1;
+				}
+			}
+		}
 	}
 
-	.menu_icon {
+	.icon_menu {
 		display: none;
 	}
 
 	.options_menu {
-		display: none;
 	}
 }
