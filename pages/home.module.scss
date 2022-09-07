@@ -1,0 +1,11 @@
+@import '../styles/variables.scss';
+
+.container {
+	width: max(800px, 70%);
+	background-color: red;
+	margin: 0 auto;
+}
+
+#section1 {
+	background-color: blue;
+}
