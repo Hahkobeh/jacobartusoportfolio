@@ -4,7 +4,7 @@ $icon_size: 70px;
 $height: $nav_height;
 
 .container {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	display: flex;
@@ -12,6 +12,8 @@ $height: $nav_height;
 	justify-content: space-between;
 	width: 100vw;
 	height: $height;
+	background-color: white;
+	z-index: 5;
 }
 
 .logo {

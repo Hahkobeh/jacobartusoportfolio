@@ -6,6 +6,13 @@
 	margin: 0 auto;
 }
 
-#section1 {
+.section {
+	height: calc(100vh - $nav_height);
 	background-color: blue;
+	h2 {
+		margin: 0;
+	}
+	h1 {
+		margin: 0;
+	}
 }
