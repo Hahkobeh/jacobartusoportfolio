@@ -10,6 +10,14 @@ const Experience: NextPage = (props: Props) => {
 		<>
 			<Metadata currentPage='Experience' />
 			<Navbar currentPage='Experience' />
+			<main>
+				<div>
+					<ul>
+						<li>Calgary 911</li>
+						<li>Tutor</li>
+					</ul>
+				</div>
+			</main>
 		</>
 	);
 };

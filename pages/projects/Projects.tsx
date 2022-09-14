@@ -10,6 +10,17 @@ const Projects: NextPage = (props: Props) => {
 		<>
 			<Metadata currentPage='Projects' />
 			<Navbar currentPage='Projects' />
+			<main>
+				<div>
+					<ul>
+						<li>VCPDR</li>
+						<li>LifeXP</li>
+						<li>TxtHub</li>
+						<li>Property</li>
+						<li>Furniture</li>
+					</ul>
+				</div>
+			</main>
 		</>
 	);
 };

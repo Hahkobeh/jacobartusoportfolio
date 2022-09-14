@@ -4,15 +4,22 @@
 	width: max(800px, 70%);
 	background-color: red;
 	margin: 0 auto;
+	overflow-y: scroll;
+	height: calc(100vh - $nav_height);
+	scroll-snap-type: y mandatory;
 }
 
 .section {
+	scroll-snap-align: start;
 	height: calc(100vh - $nav_height);
 	background-color: $background_1;
 	h2 {
 		margin: 0;
 	}
 	h1 {
+		margin: 0;
+	}
+	p {
 		margin: 0;
 	}
 }

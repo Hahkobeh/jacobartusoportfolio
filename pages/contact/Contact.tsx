@@ -10,6 +10,11 @@ const Contact: NextPage = (props: Props) => {
 		<>
 			<Metadata currentPage='Contact' />
 			<Navbar currentPage='Contact' />
+			<main>
+				<div>
+					<p></p>
+				</div>
+			</main>
 		</>
 	);
 };

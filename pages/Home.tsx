@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import classNames from 'classnames/bind';
 import type { NextPage } from 'next';
 import Head from 'next/head';
@@ -17,18 +16,30 @@ const Home: NextPage = () => {
 			<main>
 				<Navbar currentPage='Home' />
 				<div className={cn('container')}>
-					<div className={cn('section')}>
+					<section className={cn('section')}>
 						<h2>Hello, I'm</h2>
 						<h1>Jacob Artuso</h1>
 						<h3>Nice to meet you</h3>
-					</div>
-				</div>
-				<div className={cn('container')}>
-					<div className={cn('section')}>
-						<h2>Hello, I'm</h2>
-						<h1>Jacob Artuso</h1>
-						<h3>Nice to meet you</h3>
-					</div>
+					</section>
+
+					<section className={cn('section')}>
+						<p>
+							I am a 4th year software engineering and commerce
+							student at the University of Calgary.
+						</p>
+					</section>
+					<section className={cn('section')}>
+						<p>
+							I am a 4th year software engineering and commerce
+							student at the University of Calgary.
+						</p>
+					</section>
+					<section className={cn('section')}>
+						<p>
+							I am a 4th year software engineering and commerce
+							student at the University of Calgary.
+						</p>
+					</section>
 				</div>
 			</main>
 
