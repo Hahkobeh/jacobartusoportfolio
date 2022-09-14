@@ -30,7 +30,7 @@ const Navbar = ({ currentPage }: Props) => {
 			<Link href={'/'}>
 				<h1
 					className={cn('logo', {
-						logo_menu: showMenu && currentPage !== 'Home',
+						logo_menu: showMenu,
 					})}
 				>
 					Jacob Artuso
