@@ -15,6 +15,7 @@ type Props = {
 const Navbar = ({ currentPage }: Props) => {
 	const [showMenu, setShowMenu] = useState(false);
 	const [theme, setTheme] = useState('light');
+	console.log(currentPage);
 
 	const changeTheme = () => {
 		setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
@@ -46,11 +47,9 @@ const Navbar = ({ currentPage }: Props) => {
 				/>
 			</div>
 			<ul className={cn('options', { options_menu: showMenu })}>
-				<li className={cn('option')}>
+				<li className={cn('option', { active: selected('About') })}>
 					<Link href={'/about'}>
-						<h2 className={cn({ active: selected('About') })}>
-							About
-						</h2>
+						<h2>About</h2>
 					</Link>
 				</li>
 				<li

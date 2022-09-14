@@ -8,7 +8,7 @@
 
 .section {
 	height: calc(100vh - $nav_height);
-	background-color: blue;
+	background-color: $background_1;
 	h2 {
 		margin: 0;
 	}
