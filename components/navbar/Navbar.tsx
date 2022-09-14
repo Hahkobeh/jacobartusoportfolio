@@ -15,7 +15,6 @@ type Props = {
 const Navbar = ({ currentPage }: Props) => {
 	const [showMenu, setShowMenu] = useState(false);
 	const [theme, setTheme] = useState('light');
-	console.log(currentPage);
 
 	const changeTheme = () => {
 		setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));

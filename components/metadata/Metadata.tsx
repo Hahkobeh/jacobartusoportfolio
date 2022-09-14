@@ -6,6 +6,7 @@ type Props = {
 };
 
 const Metadata = ({ currentPage }: Props) => {
+	console.log(currentPage);
 	return (
 		<Head>
 			<title>JA - {currentPage}</title>
@@ -15,4 +16,4 @@ const Metadata = ({ currentPage }: Props) => {
 	);
 };
 
-export default Metadata;
+export default React.memo(Metadata);
