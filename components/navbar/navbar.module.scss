@@ -18,6 +18,7 @@ $height: $nav_height;
 }
 
 .logo {
+	position: relative;
 	font-size: 2.5rem;
 	font-weight: 700;
 	margin: auto auto auto 0.4em;
@@ -26,7 +27,29 @@ $height: $nav_height;
 
 	padding: 0.2em 0.5em;
 
-	// text-shadow: 3px 3px 0 red;
+	&:hover {
+		&::after {
+			height: 7px;
+		}
+	}
+
+	&.active {
+		&:hover {
+			&::after {
+				height: 5px;
+			}
+		}
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 11px;
+		left: 34px;
+		width: 82%;
+		height: 5px;
+		background-color: $accent_1;
+	}
 }
 
 .logo_menu {
@@ -135,8 +158,8 @@ $height: $nav_height;
 				margin: 0 auto;
 				font-weight: 400;
 				&:hover {
-					border-bottom: 3px solid $font_1;
-					margin-bottom: -3px;
+					border-bottom: 2.5px solid $font_1;
+					margin-bottom: -2.5px;
 				}
 			}
 

@@ -30,6 +30,7 @@ const Navbar = ({ currentPage }: Props) => {
 				<h1
 					className={cn('logo', {
 						logo_menu: showMenu,
+						active: selected('Home'),
 					})}
 				>
 					Jacob Artuso
