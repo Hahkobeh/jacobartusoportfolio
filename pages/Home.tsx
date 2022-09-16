@@ -16,25 +16,27 @@ const Home: NextPage = () => {
 			<main>
 				<Navbar currentPage='Home' />
 				<div className={cn('container')}>
-					<section className={cn('section')}>
-						<h2>Hello, I'm</h2>
-						<h1>Jacob Artuso</h1>
-						<h3>Nice to meet you</h3>
+					<section className={cn('section')} id={cn('one')}>
+						<div className={cn('text')}>
+							<p>Hello, I'm</p>
+							<h1>Jacob Artuso</h1>
+							<p>Nice to meet you.</p>
+						</div>
 					</section>
 
-					<section className={cn('section')}>
+					<section className={cn('section')} id={cn('two')}>
 						<p>
 							I am a 4th year software engineering and commerce
 							student at the University of Calgary.
 						</p>
 					</section>
-					<section className={cn('section')}>
+					<section className={cn('section')} id={cn('three')}>
 						<p>
 							I am a 4th year software engineering and commerce
 							student at the University of Calgary.
 						</p>
 					</section>
-					<section className={cn('section')}>
+					<section className={cn('section')} id={cn('four')}>
 						<p>
 							I am a 4th year software engineering and commerce
 							student at the University of Calgary.

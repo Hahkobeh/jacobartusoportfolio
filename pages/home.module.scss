@@ -1,25 +1,67 @@
 @import '../styles/variables.scss';
 
 .container {
-	width: max(800px, 70%);
-	background-color: red;
+	width: min(1100px, 75%);
 	margin: 0 auto;
+
+	overflow-x: visible;
 	overflow-y: scroll;
+	scrollbar-width: none;
 	height: calc(100vh - $nav_height);
 	scroll-snap-type: y mandatory;
 }
 
 .section {
+	position: relative;
 	scroll-snap-align: start;
+	overflow-x: visible;
 	height: calc(100vh - $nav_height);
-	background-color: $background_1;
-	h2 {
+}
+
+#one {
+	.text {
+		position: absolute;
+		top: 20%;
+		margin: auto;
+		font-size: 3rem;
+		background-color: transparent;
+		overflow-x: visible;
+
+		&::before {
+			position: absolute;
+			top: -20%;
+			right: -30%;
+			content: '';
+			width: 700px;
+			height: 700px;
+			border-radius: 50%;
+			background-color: lightcoral;
+			z-index: -1;
+		}
+	}
+
+	p {
+		font-weight: 200;
 		margin: 0;
 	}
+
 	h1 {
 		margin: 0;
 	}
-	p {
-		margin: 0;
+}
+
+#two {
+	background-color: green;
+}
+
+#three {
+	background-color: orange;
+}
+
+@media only screen and (min-width: 1100px) {
+	#one {
+		.text {
+			font-size: 5rem;
+		}
 	}
 }
