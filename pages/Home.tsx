@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Metadata from '../components/metadata';
 import Navbar from '../components/navbar';
+import Profile from '../public/70993002.jpeg';
 import styles from './home.module.scss';
 
 let cn = classNames.bind(styles);
@@ -17,6 +18,18 @@ const Home: NextPage = () => {
 				<Navbar currentPage='Home' />
 				<div className={cn('container')}>
 					<section className={cn('section')} id={cn('one')}>
+						<div className={cn('profile')}>
+							<div className={cn('circle')} id={cn('c_1')} />
+							<div className={cn('circle')} id={cn('c_2')} />
+							<div className={cn('selfie')}>
+								<Image
+									src={Profile}
+									className={cn('selfie')}
+									alt='profile picture'
+									layout='fill'
+								/>
+							</div>
+						</div>
 						<div className={cn('text')}>
 							<p>Hello, I'm</p>
 							<h1>Jacob Artuso</h1>

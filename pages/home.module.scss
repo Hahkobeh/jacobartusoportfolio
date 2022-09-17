@@ -21,6 +21,7 @@
 }
 
 #one {
+	position: relative;
 	.text {
 		color: $font_1;
 		position: absolute;
@@ -30,17 +31,17 @@
 		background-color: transparent;
 		overflow-x: visible;
 
-		&::before {
-			position: absolute;
-			top: -20%;
-			right: -30%;
-			content: '';
-			width: 700px;
-			height: 700px;
-			border-radius: 50%;
-			background-color: #f08080;
-			z-index: -1;
-		}
+		// &::before {
+		// 	position: absolute;
+		// 	top: -20%;
+		// 	right: -30%;
+		// 	content: '';
+		// 	width: 700px;
+		// 	height: 700px;
+		// 	border-radius: 50%;
+		// 	background-color: #f08080;
+		// 	z-index: -1;
+		// }
 	}
 
 	p {
@@ -51,6 +52,54 @@
 	h1 {
 		position: relative;
 		margin: 0;
+	}
+
+	.profile {
+		$whole_width: 900px;
+		$ratio: 1.7;
+		$width: calc($whole_width / $ratio);
+		position: relative;
+		top: 4em;
+		right: -15em;
+		width: $whole_width;
+		aspect-ratio: $ratio;
+
+		.circle {
+			position: absolute;
+			width: $width;
+			aspect-ratio: 1;
+			top: 0;
+
+			border-radius: 50%;
+		}
+
+		#c_1 {
+			left: 0;
+			background-color: $accent_1;
+		}
+
+		#c_2 {
+			left: calc(($whole_width - $width) / 2);
+			background-color: $background_1;
+		}
+
+		.selfie {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: $width;
+			border-radius: 50%;
+			aspect-ratio: 1/1;
+			&::after {
+				content: '';
+				position: absolute;
+				width: 100%;
+				aspect-ratio: 1;
+				border-radius: 50%;
+				background-color: white;
+				opacity: 0.2;
+			}
+		}
 	}
 }
 
@@ -75,7 +124,6 @@
 					width: 94%;
 					height: 15px;
 					background-color: black;
-					opacity: 0.6;
 				}
 			}
 		}
