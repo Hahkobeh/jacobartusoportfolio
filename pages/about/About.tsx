@@ -24,6 +24,12 @@ const About: NextPage = (props: Props) => {
 							and piano.
 						</p>
 					</div>
+					<div className={cn('section')}>
+						<p>
+							I amsddsz and classical music. And I play trombone
+							and piano.
+						</p>
+					</div>
 				</div>
 			</main>
 		</>
