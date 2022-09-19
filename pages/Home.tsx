@@ -39,8 +39,6 @@ const Home: NextPage = () => {
 					</section>
 				</div>
 			</main>
-
-			<footer></footer>
 		</>
 	);
 };
