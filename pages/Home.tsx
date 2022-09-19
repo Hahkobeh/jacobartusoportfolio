@@ -35,25 +35,7 @@ const Home: NextPage = () => {
 							<h1>Jacob Artuso</h1>
 							<p>Nice to meet you.</p>
 						</div>
-					</section>
-
-					<section className={cn('section')} id={cn('two')}>
-						<p>
-							I am a 4th year software engineering and commerce
-							student at the University of Calgary.
-						</p>
-					</section>
-					<section className={cn('section')} id={cn('three')}>
-						<p>
-							I am a 4th year software engineering and commerce
-							student at the University of Calgary.
-						</p>
-					</section>
-					<section className={cn('section')} id={cn('four')}>
-						<p>
-							I am a 4th year software engineering and commerce
-							student at the University of Calgary.
-						</p>
+						<input className={cn('about_me_button')} type='button' value='About me'/>
 					</section>
 				</div>
 			</main>

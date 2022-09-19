@@ -25,7 +25,7 @@
 	.text {
 		color: $font_1;
 		position: absolute;
-		top: 20%;
+		top: 10%;
 		margin: auto;
 		font-size: 3rem;
 		background-color: transparent;
@@ -55,12 +55,12 @@
 	}
 
 	.profile {
-		$whole_width: 900px;
+		$whole_width: 400px;
 		$ratio: 1.7;
 		$width: calc($whole_width / $ratio);
 		position: relative;
-		top: 4em;
-		right: -15em;
+		top: 25em;
+		right: 0;
 		width: $whole_width;
 		aspect-ratio: $ratio;
 
@@ -101,6 +101,11 @@
 			}
 		}
 	}
+
+	.about_me_button {
+		position: absolute;
+		bottom: 0;
+	}
 }
 
 #two {
@@ -115,6 +120,7 @@
 	#one {
 		.text {
 			font-size: 5rem;
+			top: 20%;
 			h1 {
 				&::after {
 					content: '';
@@ -124,6 +130,53 @@
 					width: 94%;
 					height: 15px;
 					background-color: black;
+				}
+			}
+		}
+		.profile {
+			$whole_width: 900px;
+			$ratio: 1.7;
+			$width: calc($whole_width / $ratio);
+			position: relative;
+			top: 4em;
+			right: -15em;
+			width: $whole_width;
+			aspect-ratio: $ratio;
+
+			.circle {
+				position: absolute;
+				width: $width;
+				aspect-ratio: 1;
+				top: 0;
+
+				border-radius: 50%;
+			}
+
+			#c_1 {
+				left: 0;
+				background-color: $accent_1;
+			}
+
+			#c_2 {
+				left: calc(($whole_width - $width) / 2);
+				background-color: $background_1;
+			}
+
+			.selfie {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: $width;
+				border-radius: 50%;
+				aspect-ratio: 1/1;
+				&::after {
+					content: '';
+					position: absolute;
+					width: 100%;
+					aspect-ratio: 1;
+					border-radius: 50%;
+					background-color: white;
+					opacity: 0.2;
 				}
 			}
 		}
